@@ -175,6 +175,19 @@ main {
   align-items: stretch;
 }
 
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul,
+ol {
+  padding-left: 40px;
+}
+
 /* ----------------header---------------------- */
 
 /* typography */
@@ -186,6 +199,11 @@ main {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* layout */
@@ -200,7 +218,7 @@ main {
 /* ----------------cards---------------------- */
 
 /* typography */
-.card {
+.menu {
   background-color: #005979;
   color: #d4cea6;
   font-weight: 400;
@@ -209,41 +227,21 @@ main {
   flex: 0 1 32%;
 }
 
-.numbered-list {
-  list-style-type: decimal;
-  list-style-position: inside;
-}
-
-.bullet-list {
-  list-style-type: disc;
-  list-style-position: inside;
+.menu-level3 {
+  list-style-type: square;
 }
 
 /* layout */
-.card-1 .numbered-list {
-  margin: 16px 0;
-  padding-left: 20px;
+.menu {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.card-2 .bullet-list {
-  margin: 16px 0;
-  padding-left: 20px;
+.check-list {
+  list-style-type: none;
 }
 
-.card-2 .numbered-list {
-  padding-left: 32px;
-}
-
-.card-2 .numbered-list .bullet-list {
-  margin: 0;
-}
-
-.card-3 .check-list {
-  margin: 16px 0;
-  padding-left: 20px;
-}
-
-.card-3 .check-list li::before {
+.check-list li::before {
   content: "";
   display: inline-block;
   height: 20px;
@@ -252,7 +250,7 @@ main {
   background-image: url("/assets/media/icons8-tick-box.svg");
 }
 
-.card-3 .check-list li {
+.check-list li {
   margin-bottom: 12px;
 }
 
